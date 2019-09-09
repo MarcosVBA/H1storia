@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro - H1storia</title>
+	<link rel="icon" href="../img/LOGOBrowser.png">
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+  	<script src="/js/jquery.min.js"></script>
+  	<script src="/js/popper.min.js"></script>
+  	<script src="/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/mainStyle.css">
+    <link rel="stylesheet" type="text/css" href="/css/signin.css">
+
+</head>
+
+<body class="text-center" style="padding:0px;left: -0.4%;position: fixed;width: 100%;top: 15%;">
+    <form class="form-signin" method="POST" action="cadastrar.php">
+      <a href="/"><img class="mb-4" src="/img/LOGOBrowser.png" alt="" width="100" height="100"></a>
+      <h1 class="h3 mb-5 font-weight-normal d-md-block d-none">Formulario de Cadastro</h1>
+      <label for="inputName" class="sr-only">Apenlido</label>
+      <input type="name" id="inputName" class="form-control" placeholder="Digite o seu apelido" required autofocus name="nome">
+      <label for="inputEmail" class="sr-only">Email</label>
+      <input type="Email" id="inputEmail" class="form-control" placeholder="Email" required autofocus name="email">
+      <label for="inputPassword" class="sr-only">Senha</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required name="senha">
+      <label for="inputPassword" class="sr-only">Confirmar Senha</label>
+      <input type="password" id="confirmePassword" class="form-control" placeholder="Confirmar Senha" required name="senhaConf">
+      <button class="mt-4 btn btn-lg btn-primary btn-block cadButao" type="submit">Cadastrar-se</button>
+      <div class="mt-4">
+      	<a href="/" class="white">Voltar</a>
+      </div>
+      <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
+    </form>
+    
+    <script>
+        var       password = document.getElementById("inputPassword"    )
+        , confirm_password = document.getElementById("confirmePassword" )
+        , name             = document.getElementById("inputName"        );
+
+
+        function validatePassword(){
+        if(password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("Senhas diferentes!");
+        } else {
+        confirm_password.setCustomValidity('');
+            }
+        }
+        
+        function validateLenght(){
+             if(password.value.length < 6){
+        password.setCustomValidity("As senhas digitadas tem que ter mais que 6 caracteres");
+        } else {
+        password.setCustomValidity('');
+            } 
+        }
+        
+        function validateName(){
+            if(name.value.length < 5){
+        name.setCustomValidity("O Apelido deve ter mais que 5 caracteres");
+        } else {
+        name.setCustomValidity('');
+            }
+        }
+        
+        name.onchange = validateName;
+        name.onkeyup = validateName;
+        password.onchange = validateLenght;
+        password.onkeyup = validateLenght;
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+        
+    </script>
+  </body>
+</html>
