@@ -2,6 +2,10 @@
 O site H1storia foi feito como projeto de TCC para o curso técnico em informatica para internet na instituição ETEC Alberto Feres.
 Este foi meu primeiro projeto relacionado a desenvolvimento web.
 
+Durante o periodo de 2018 quando estava fazendo o site, ele foi colocado online utilizando uma conta gratuita na 000webhost.
+
+Infelizmente, atualmente o site não funciona mais, seria necessario realizar diversas correções e como na época eu não me preocupei em fazer o código seguindo boas práticas, muitas mudanças aconteceram, algumas tecnologias e funções se tornaram obsoletas, fazendo que atualmente não seja possivel utiliza-lo.
+
 ## Imagens
 
 ![Captura de tela 2022-02-06 181200](https://user-images.githubusercontent.com/49932975/152701656-fcbd4040-d96d-49c8-bafe-8b4b563c7958.png)
